@@ -9,13 +9,13 @@ def get_requirements(file_path:str)->list[str]:
     with open(file_path) as file_obj:
         requirements = file_obj.readlines()
         requirements = [req.replace("\n","") for req in requirements]
-
-if hypen_e_dot in requirements:
-        requirements.remove(hypen_e_dot)   
+        if hypen_e_dot in requirements:
+            requirements.remove(hypen_e_dot)   
     return requirements
 
-setup(    name="mlproject",
-    version="0.1.0",
+setup(  
+    name="TEST",
+    version="0.0.1",
     author="Naveenpanguluri1018",
     author_email="naveenpanguluri1018.github.io",
     packages=find_packages(),
